@@ -9,9 +9,11 @@ namespace UsedCars.WebScraper
 {
     public static class UsedCars
     {
+        public static string _urlWithParameters;
         public static string GetUsedCarsHtml(string brand, string model, int yearFrom, int yearTo)
         {
             string urlWithParameters = $"https://www.polovniautomobili.com/auto-oglasi/pretraga?brand={brand}&model%5B%5D={model}&price_to=&year_from={yearFrom}&year_to={yearTo}&showOldNew=all&submit_1=&without_price=1";
+            _urlWithParameters = urlWithParameters;
             var httpClient = new HttpClient();
             var html = httpClient.GetStringAsync(urlWithParameters);
 

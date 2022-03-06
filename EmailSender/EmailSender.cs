@@ -27,8 +27,8 @@ namespace EmailSender
             sb.AppendLine("Dear user,");
             sb.AppendLine();
             sb.AppendLine($"There is difference in your search. Difference now is: {textForBody}!");
-            sb.AppendLine();
-            sb.AppendLine("We will keep youu updated!");
+            sb.AppendLine($"You can check changes on link: {UsedCars.WebScraper.UsedCars._urlWithParameters}");
+            sb.AppendLine("We will keep you updated!");
             sb.AppendLine();
             sb.AppendLine("Sincerelly,");
             sb.AppendLine("Your WebScraper");
